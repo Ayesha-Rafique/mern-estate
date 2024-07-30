@@ -1,6 +1,7 @@
 import { data } from 'autoprefixer';
 import { useState } from 'react';
 import {Link, useNavigate} from 'react-router-dom'
+import OAuth from '../component/OAuth';
 
 export default function Signup() {
     const [formData, setFormData] = useState({});
@@ -69,6 +70,7 @@ export default function Signup() {
         <button disabled={loading}
           className='bg-slate-700 text-white p-3 rounded-lg uppercase hover:opacity-95 disabled:opacity-80'
         > {loading ? 'Loading...' : 'Sign Up'}</button>
+        <OAuth/>
         </form>
 
         <div className='flex gap-2 mt-5'>
