@@ -5,6 +5,7 @@ import About from "c:/Users/Night Agent/Desktop/Ayesha/mern-estate/client/src/pa
 import Profile from "c:/Users/Night Agent/Desktop/Ayesha/mern-estate/client/src/pages/profile"
 import Signup from "c:/Users/Night Agent/Desktop/Ayesha/mern-estate/client/src/pages/Signup"
 import Header from "./component/Header"
+import PrivateRoute from "./component/PrivateRoute"
 
 export default function App() {
   return (
@@ -14,9 +15,11 @@ export default function App() {
       <Route path="/" element={<Home />} />
       <Route path="/signin" element={<Signin />} />
       <Route path="/signup" element={<Signup />} />
+      <Route element={<PrivateRoute />} >
       <Route path="/about" element={<About />} />
       <Route path="/profile" element={<Profile />} />
+    </Route>
     </Routes>
     </BrowserRouter>
-  )
+  );
 }
